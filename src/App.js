@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Particles from 'react-particles-js';
+import particlesConfig from './config/particlesConfig';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <div
+            className='App'
+            style={{ position: 'relative', overflow: 'hidden' }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <div style={{ position: 'absolute' }}>
+                <Particles
+                    height='100vh'
+                    width='100vw'
+                    params={particlesConfig}
+                ></Particles>
+            </div>
+            <header className='App-header'>
+              <h2>Particles.js</h2>
+                <p>
+                    A cool background for all of your web app
+                </p>
+                <img src={logo} className='App-logo' alt='logo' />
+                
+            </header>
+        </div>
+    );
 }
 
 export default App;
