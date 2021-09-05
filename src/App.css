@@ -24,6 +24,19 @@
   color: white;
 }
 
+.App-header h2 {
+  color: khaki;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 500ms ease-in-out 25ms;
+}
+
+.App-header h2:hover {
+  transform: scale(0.5) translate(-100%, -100%)
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -32,6 +45,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
